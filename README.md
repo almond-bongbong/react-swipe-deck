@@ -11,7 +11,6 @@
 - 🚀 **Swipe/Drag Functionality**: Swipe cards left or right to interact.
 - 💻 **Responsive Design**: Optimized for desktop and mobile devices.
 - 🔄 **Dynamic Content**: Easily customizable card content.
-- 👍👎 **Feedback Buttons**: Like and dislike buttons for additional interaction.
 
 ## 🚀 Usage
 
