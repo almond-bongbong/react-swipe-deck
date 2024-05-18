@@ -1,0 +1,171 @@
+.fix_container {
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 10;
+  flex: 1;
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  margin: 0 auto;
+  touch-action: none;
+}
+
+.card_inner {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100%;
+  border-radius: 10px;
+  background-color: #fff;
+  pointer-events: none;
+  transform: translateY(20px) scale(0.97);
+  transition:
+    box-shadow 0.3s,
+    transform 0.3s;
+}
+
+.card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  &:first-child {
+    .card_inner {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &.active {
+    top: 0;
+    transform-origin: center top;
+    pointer-events: auto;
+
+    .card_inner {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transform: translateY(0px) scale(1);
+    }
+  }
+
+  &.evaluating {
+    opacity: 0;
+    pointer-events: none;
+    transition:
+      opacity 0.3s,
+      transform 0.3s;
+  }
+
+  &.evaluating_good {
+    transform: translateX(100%) rotate(30deg);
+  }
+
+  &.evaluating_bad {
+    transform: translateX(-100%) rotate(-30deg);
+  }
+}
+
+.image_wrap {
+  flex: 2;
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.name {
+  flex: 1;
+  padding: 40px 10px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.button_wrap {
+  button {
+    opacity: 0.8;
+    position: absolute;
+    top: 50%;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: -50px;
+    font-size: 0;
+    text-align: center;
+    transition: opacity 0.4s ease-out;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .good_button {
+    right: 50%;
+    margin-right: -400px;
+    background-color: #00bfa5;
+  }
+
+  .bad_button {
+    left: 50%;
+    margin-left: -400px;
+    background-color: #f44336;
+    transform: scale(-1, 1);
+  }
+
+  img {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .button_wrap {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 20px;
+    left: 20px;
+    bottom: 20px;
+
+    button {
+      opacity: 1;
+      flex: 1;
+      position: static;
+      margin: 0;
+      height: 50px;
+      border-radius: 8px;
+
+      & + button {
+        margin-left: 10px;
+      }
+    }
+
+    .good_button {
+      margin-right: 0;
+    }
+
+    .bad_button {
+      margin-left: 0;
+    }
+
+    img {
+      width: 34px;
+      height: 34px;
+    }
+  }
+}

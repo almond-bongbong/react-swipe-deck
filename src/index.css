@@ -1,0 +1,94 @@
+:root {
+  --primary-color: #007bff;
+  --primary-color-light: #f9252d;
+
+  --base-font: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
+    helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+  --base-font-color: #292f36;
+  --base-font-size: 16px;
+}
+
+@media screen and (max-width: 1200px) {
+  :root {
+    --base-font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --base-font-size: 14px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  font-size: var(--base-font-size);
+  font-family: var(--base-font);
+}
+
+body {
+  background-color: #fff;
+  color: var(--base-font-color);
+  font-size: var(--base-font-size);
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  font-family: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+address {
+  font-style: normal;
+}
+
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    user-select: none;
+  }
+}

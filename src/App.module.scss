@@ -1,0 +1,21 @@
+.container {
+  overflow: hidden;
+  background: linear-gradient(180deg, #1b054d 0%, #3a1e6e 100%);
+
+  main {
+    position: relative;
+    display: flex;
+    flex: 1;
+    height: 100%;
+    flex-direction: column;
+    padding: 80px 20px 100px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    main {
+      padding: 40px 20px 110px;
+    }
+  }
+}
