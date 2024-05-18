@@ -1,7 +1,9 @@
 {
   "name": "react-swipe-deck",
-  "private": true,
-  "version": "0.0.0",
+  "author": "almond-bongbong",
+  "version": "1.0.0",
+  "license": "MIT",
+  "homepage": "https://github.com/almond-bongbong/react-simple-toasts",
   "type": "module",
   "scripts": {
     "dev": "vite",

@@ -9,4 +9,5 @@ export default defineConfig({
       '@': '/src',
     },
   },
+  base: './', // Relative path to the root of the domain
 });
