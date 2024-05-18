@@ -3,7 +3,7 @@
   "author": "almond-bongbong",
   "version": "1.0.0",
   "license": "MIT",
-  "homepage": "https://github.com/almond-bongbong/react-simple-toasts",
+  "homepage": "https://github.com/almond-bongbong/react-swipe-deck",
   "type": "module",
   "scripts": {
     "dev": "vite",

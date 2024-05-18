@@ -1,6 +1,12 @@
 # react-swipe-deck
 
-![Swipe Demo](path-to-your-gif)
+<p align="center">
+    <a target="_blank" href="https://almond-bongbong.github.io/react-slot-counter/">
+        <img src="https://github.com/almond-bongbong/react-swipe-deck/raw/main/docs/react-swipe-deck.gif" />
+    </a>
+</p>
+
+[Check out the live demo!](https://almond-bongbong.github.io/react-swipe-deck/)
 
 ## 📖 Overview
 
